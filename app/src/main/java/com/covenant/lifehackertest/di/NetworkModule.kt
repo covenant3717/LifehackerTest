@@ -4,7 +4,6 @@ import com.covenant.lifehackertest.App
 import com.covenant.lifehackertest.network.MainApi
 import com.covenant.lifehackertest.util.BASE_URL
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
-import com.readystatesoftware.chuck.ChuckInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
@@ -32,6 +31,5 @@ fun provideOkHttpClient(): OkHttpClient = OkHttpClient.Builder()
     .readTimeout(10, TimeUnit.SECONDS)
     .writeTimeout(10, TimeUnit.SECONDS)
     .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
-    .addInterceptor(ChuckInterceptor(App.appCtx))
     .build()
 

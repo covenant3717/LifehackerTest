@@ -57,10 +57,4 @@ dependencies {
     // Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
 
-    // Ripple effect
-    implementation 'com.balysv:material-ripple:1.0.2'
-
-    // Отладка HTTP-запросов
-    debugImplementation 'com.readystatesoftware.chuck:library:1.1.0'
-    releaseImplementation 'com.readystatesoftware.chuck:library-no-op:1.1.0'
 }
