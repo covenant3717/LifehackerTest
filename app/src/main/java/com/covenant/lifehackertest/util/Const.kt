@@ -4,3 +4,5 @@ package com.covenant.lifehackertest.util
  */
 
 const val BASE_URL = "https://lifehacker.ru/api/wp/v2/"
+
+const val OBJECT = "object"
