@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EE5E43</color>
+    <color name="colorPrimaryDark">#EE5E43</color>
+    <color name="colorAccent">#EE5E43</color>
+
+    <!-- MainActivity -->
+    <color name="main_tv_title">#FFF5FE</color>
+    <color name="main_item_tv_author">#4D000000</color>
+    <color name="main_item_tv_title">#000000</color>
+    <color name="main_item_divider">#ECECEC</color>
+</resources>
