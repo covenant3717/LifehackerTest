@@ -36,6 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="tittle"
+        android:ellipsize="end"
+        android:maxLines="3"
         android:textColor="@color/main_item_tv_title"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/itemImg"

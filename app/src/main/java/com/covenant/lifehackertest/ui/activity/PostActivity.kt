@@ -1,7 +1,8 @@
 package com.covenant.lifehackertest.ui.activity
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.view.View
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -63,6 +64,18 @@ class PostActivity : AppCompatActivity() {
         post_wv.loadUrl(data.link)
 
         post_wv.webChromeClient = object : WebChromeClient() {
+            override fun getDefaultVideoPoster(): Bitmap? {
+                // это фикс. На некоторых версиях ВебВью не может прогрузить какие-то ресурсы и крашится
+
+                return if (super.getDefaultVideoPoster() == null) {
+                    BitmapFactory.decodeResource(this@PostActivity.resources,
+                        R.drawable.placeholder
+                    )
+                } else {
+                    super.getDefaultVideoPoster()
+                }
+            }
+
             override fun onProgressChanged(view: WebView, progress: Int) {
                 if (progress < 100 && post_pb.visibility == ProgressBar.GONE) {
                     post_pb.visibility = ProgressBar.VISIBLE
@@ -70,7 +83,7 @@ class PostActivity : AppCompatActivity() {
 
                 post_pb.progress = progress
                 if (progress == 100) {
-                    post_pb.setVisibility(ProgressBar.GONE)
+                    post_pb.visibility = ProgressBar.GONE
                 }
             }
         }
