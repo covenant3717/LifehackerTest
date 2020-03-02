@@ -3,8 +3,7 @@ package com.covenant.lifehackertest.mvp
 import androidx.lifecycle.MutableLiveData
 import com.covenant.lifehackertest.model.Post
 import com.covenant.lifehackertest.network.LifehackerRepository
-import com.covenant.lifehackertest.util.mlg
-import com.example.kotlin_with_retrofit2.network.Resource
+import com.covenant.lifehackertest.network.Resource
 import kotlinx.coroutines.launch
 import org.koin.core.KoinComponent
 
@@ -25,7 +24,6 @@ class MainPresenter(private val view: MainView) : BasePresenter(view), KoinCompo
     //==============================================================================================
 
     private fun getPosts() {
-        mlg("getPosts")
         viewModelScope.launch {
             view.showProgress(true)
 

@@ -1,6 +1,5 @@
 package com.covenant.lifehackertest.di
 
-import com.covenant.lifehackertest.App
 import com.covenant.lifehackertest.network.MainApi
 import com.covenant.lifehackertest.util.BASE_URL
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory

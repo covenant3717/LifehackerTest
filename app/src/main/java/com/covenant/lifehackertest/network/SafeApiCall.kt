@@ -1,4 +1,4 @@
-package com.example.kotlin_with_retrofit2.network
+package com.covenant.lifehackertest.network
 
 import com.covenant.lifehackertest.util.mlg
 import kotlinx.coroutines.Dispatchers
@@ -26,6 +26,8 @@ suspend fun <T> safeApiCall(apiCall: suspend () -> T): Resource<T> {
 
         } catch (throwable: Throwable) {
             mlg(throwable.toString())
+            mlg(throwable.message.toString())
+            mlg(throwable.cause?.message.toString())
 
             when (throwable) {
                 is IOException -> Resource.Error(null, throwable.message)

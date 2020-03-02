@@ -1,9 +1,6 @@
 package com.covenant.lifehackertest.network
 
 import com.covenant.lifehackertest.model.Post
-import com.covenant.lifehackertest.util.mlg
-import com.example.kotlin_with_retrofit2.network.Resource
-import com.example.kotlin_with_retrofit2.network.safeApiCall
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 
@@ -22,7 +19,6 @@ class LifehackerRepository() : Repository, KoinComponent {
     //==============================================================================================
 
     override suspend fun getPosts(): Resource<MutableList<Post>> {
-        mlg("getPost safeApi")
         return safeApiCall{ mainApi.getPosts().await() }
     }
 

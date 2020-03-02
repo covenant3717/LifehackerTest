@@ -1,6 +1,6 @@
 package com.covenant.lifehackertest.mvp
 
-import com.example.kotlin_with_retrofit2.network.Resource
+import com.covenant.lifehackertest.network.Resource
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
